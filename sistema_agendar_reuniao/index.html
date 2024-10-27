@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Agenda de Reuniões</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Agenda de Reuniões</h1>
+        
+        <div class="form-container">
+            <input type="text" id="titulo" placeholder="Título da Reunião">
+            <input type="datetime-local" id="data_hora">
+            <button onclick="adicionarReuniao()">Adicionar Reunião</button>
+        </div>
+        
+        <div class="btn-container">
+            <button onclick="consultarReunioes()">Consultar Reuniões</button>
+        </div>
+        
+        <div id="reunioes-list"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
