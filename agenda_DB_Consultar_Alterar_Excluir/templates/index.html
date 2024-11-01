@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Agendamento de Reuniões</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Agenda de Reuniões</h1>
+        
+        <!-- Formulário para adicionar reunião -->
+        <form id="meeting-form">
+            <label for="title">Título da Reunião:</label>
+            <input type="text" id="title" required>
+            
+            <label for="date">Data:</label>
+            <input type="date" id="date" required>
+
+            <label for="time">Hora:</label>
+            <input type="time" id="time" required>
+
+            <label for="description">Descrição:</label>
+            <textarea id="description"></textarea>
+
+            <button type="submit">Agendar Reunião</button>
+        </form>
+        
+        <div id="message"></div>
+
+        <!-- Campos de busca por período e botão de consulta -->
+        <h2>Consultar Reuniões por Período</h2>
+        <label for="start-date">Data de Início:</label>
+        <input type="date" id="start-date" required>
+        <br>
+        <label for="end-date">Data de Fim:</label>
+        <input type="date" id="end-date" required>
+        
+        <button onclick="consultarReunioesPorPeriodo()">Consultar Reuniões</button>
+        
+        <!-- Div para exibir o resultado da consulta -->
+        <div id="reunioes-list"></div>
+    </div>
+
+    <script src="../static/script.js"></script>
+</body>
+</html>
